@@ -2,13 +2,7 @@ import sys
 
 f = open(sys.argv[1], "r")
 
-mem = list(map(
-    lambda ins: int(ins), 
-    f.read()
-     .replace("subleq ", "")
-     .replace("\n", " ")
-     .replace("\t", "")
-     .split(" ")))
+mem = list(map(int, f.read().replace("subleq ", "").split()))
 
 ptr = 0
 
